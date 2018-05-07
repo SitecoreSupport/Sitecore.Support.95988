@@ -103,7 +103,7 @@ namespace Sitecore.Support.Publishing.Pipelines.PublishItem
                 {
                     if (this.CompareSharedFields(sourceItem, targetItem))
                     {
-                        context.AbortPipeline(PublishOperation.Skipped, PublishChildAction.Skip, "No versions to publish in '{0}' language.".FormatWith(sourceItem.Language));
+                        context.AbortPipeline(PublishOperation.Skipped, PublishChildAction.Allow, "No versions to publish in '{0}' language.".FormatWith(sourceItem.Language));
                         return;
                     }
                     context.Action = PublishAction.PublishSharedFields;
